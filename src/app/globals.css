@@ -1,0 +1,171 @@
+@import 'tailwindcss';
+
+/* ── Design tokens (Tailwind v4 CSS-first) ─────────────────────────────── */
+@theme inline {
+  --color-bg-void: #030305;
+  --color-bg-surface-1: #0a0b10;
+  --color-bg-surface-2: #12141d;
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+
+  --color-accent-emerald: #00ff95;
+  --color-accent-indigo: #6366f1;
+  --color-accent-cyan: #00f0ff;
+  --color-accent-crimson: #ff2e63;
+  --color-accent-amber: #ffb800;
+
+  --color-text-primary: #f4f5f8;
+  --color-text-muted: #71788b;
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, 'SFMono-Regular', monospace;
+}
+
+/* ── Base ───────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background-color: var(--color-bg-void);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-accent-cyan) 30%, transparent);
+  color: var(--color-text-primary);
+}
+
+/* ── Fluid typography scale ────────────────────────────────────────────── */
+.display-header {
+  font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+}
+
+.heading-kpi {
+  font-size: clamp(1.8rem, 3vw + 0.5rem, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.body-text {
+  font-size: clamp(0.875rem, 1vw + 0.2rem, 1.125rem);
+  line-height: 1.6;
+}
+
+.mono-metrics {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* ── Glassmorphism ─────────────────────────────────────────────────────── */
+.glass-card {
+  background: rgba(10, 11, 16, 0.65);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.56);
+}
+
+.glass-topline {
+  position: relative;
+}
+.glass-topline::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+  background-clip: content-box;
+}
+
+/* ── Reduced motion (WCAG 2.1) ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hide native cursor when the custom liquid cursor is active (desktop only) */
+@media (pointer: fine) {
+  .cursor-hidden,
+  .cursor-hidden * {
+    cursor: none !important;
+  }
+}
+
+/* ── Utility keyframes ─────────────────────────────────────────────────── */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2.4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.animate-shimmer {
+  background-size: 200% 100%;
+  animation: shimmer 2.2s linear infinite;
+}
+
+@keyframes bento-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.bento-cell {
+  animation: bento-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
