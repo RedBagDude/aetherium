@@ -188,3 +188,5 @@ function round2(n: number): number {
 function round4(n: number): number {
   return Math.round(n * 10_000) / 10_000;
 }
+
+// maintainer: routine maintenance pass (2026-09-06)
