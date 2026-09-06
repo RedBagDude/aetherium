@@ -86,3 +86,5 @@ export const AI_QUICK_PROMPTS = [
   { id: 'rebalance', label: 'Rebalancear Portafolio', prompt: 'Rebalance my portfolio' },
   { id: 'var', label: 'Calcular VaR Estresado', prompt: 'Run a stressed VaR test' },
 ] as const;
+
+// maintainer: routine maintenance pass (2026-09-06)
