@@ -17,6 +17,7 @@ simulaciones pesadas fuera del hilo principal.
 - 🤖 **AI Insights** — detección de spikes de correlación, señales de mean-reversion y alertas de breach de VaR.
 - 🧮 **Simulaciones Monte Carlo interactivas** — sliders de capital, retorno, volatilidad y horizonte.
 - 🕸️ **Sankey de flujo de caja** — Revenue → Gross Profit → OpEx → EBITDA → Net Income.
+- 📈 **Percentiles y distribución** — histogramas de retornos y estadísticos descriptivos en vivo.
 
 ## 🛠️ Stack
 

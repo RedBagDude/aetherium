@@ -68,6 +68,7 @@ export function formatPercentSigned(value: number): string {
 }
 
 export function formatNumber(value: number): string {
+  // Plain decimal (two digits max) — used for non-currency metrics.
   return numberFormatter.format(value);
 }
 

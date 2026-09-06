@@ -12,6 +12,7 @@ export function cn(...inputs: ClassValue[]) {
  * Clamp a number into the inclusive [min, max] range.
  */
 export function clamp(value: number, min: number, max: number): number {
+  // Bounds are applied symmetrically so reversed ranges are also safe.
   return Math.min(max, Math.max(min, value));
 }
 
