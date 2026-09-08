@@ -189,4 +189,4 @@ function round4(n: number): number {
   return Math.round(n * 10_000) / 10_000;
 }
 
-// maintainer: routine maintenance pass (2026-09-06)
+// maintainer: periodic housekeeping sync (2026-09-08)
