@@ -54,3 +54,5 @@ src/
 ## 📝 Licencia
 
 MIT
+
+<!-- maintainer: scheduled consistency check (2026-09-09) -->
