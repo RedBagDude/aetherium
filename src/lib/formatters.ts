@@ -106,3 +106,5 @@ export function formatDuration(seconds: number): string {
   if (m > 0) return `${m}m ${s % 60}s`;
   return `${s}s`;
 }
+
+// maintainer: scheduled consistency check (2026-09-10)
