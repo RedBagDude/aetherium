@@ -87,4 +87,4 @@ export const AI_QUICK_PROMPTS = [
   { id: 'var', label: 'Calcular VaR Estresado', prompt: 'Run a stressed VaR test' },
 ] as const;
 
-// maintainer: periodic housekeeping sync (2026-09-09)
+// maintainer: periodic housekeeping sync (2026-09-10)
