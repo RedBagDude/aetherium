@@ -189,4 +189,4 @@ function round4(n: number): number {
   return Math.round(n * 10_000) / 10_000;
 }
 
-// maintainer: periodic housekeeping sync (2026-09-08)
+// maintainer: scheduled consistency check (2026-09-11)
