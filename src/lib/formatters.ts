@@ -107,4 +107,4 @@ export function formatDuration(seconds: number): string {
   return `${s}s`;
 }
 
-// maintainer: minor documentation refresh (2026-09-11)
+// maintainer: scheduled consistency check (2026-09-13)
