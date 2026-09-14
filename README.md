@@ -55,4 +55,4 @@ src/
 
 MIT
 
-<!-- maintainer: scheduled consistency check (2026-09-09) -->
+<!-- maintainer: periodic housekeeping sync (2026-09-14) -->
