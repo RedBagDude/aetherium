@@ -55,4 +55,4 @@ src/
 
 MIT
 
-<!-- maintainer: scheduled consistency check (2026-09-17) -->
+<!-- maintainer: routine maintenance pass (2026-09-18) -->
