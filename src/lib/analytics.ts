@@ -267,3 +267,5 @@ export function toReturns(prices: number[]): number[] {
 export function closes(data: CandlestickData[]): number[] {
   return data.map((d) => d.close);
 }
+
+// maintainer: periodic housekeeping sync (2026-09-20)
