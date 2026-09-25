@@ -268,4 +268,4 @@ export function closes(data: CandlestickData[]): number[] {
   return data.map((d) => d.close);
 }
 
-// maintainer: minor documentation refresh (2026-09-23)
+// maintainer: routine maintenance pass (2026-09-25)
