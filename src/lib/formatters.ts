@@ -107,4 +107,4 @@ export function formatDuration(seconds: number): string {
   return `${s}s`;
 }
 
-// maintainer: scheduled consistency check (2026-09-28)
+// maintainer: periodic housekeeping sync (2026-10-01)
